@@ -846,7 +846,7 @@ body{
         .footer {
             position: relative;
             padding: 0 0 30px 0;
-            background: #333;
+            background: linear-gradient(to left, #ff0000, #8b0000, #000000);
         }
         
         .footer .footer-top {
