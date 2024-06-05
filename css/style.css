@@ -8,6 +8,7 @@
     text-transform: capitalize;
     transition: all .2s linear;
     text-decoration: none;
+    scroll-behavior: smooth;
 }
 
 html{
