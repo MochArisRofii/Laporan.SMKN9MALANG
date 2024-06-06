@@ -21,6 +21,118 @@
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
     <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
     <script src="./js/main.js"></script>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #myImg {
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        #myImg:hover {
+            opacity: 0.7;
+        }
+
+        /* The Modal (background) */
+        .modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            /* z-index: 1; Sit on top */
+            padding-top: 100px;
+            /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            /* background-color: rgba(0,0,0,0.9); Black w/ opacity */
+            z-index: 9999999;
+        }
+
+        /* Modal Content (image) */
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 40%;
+            max-width: 700px;
+        }
+
+        /* Caption of Modal Image */
+        #caption {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+            text-align: center;
+            color: #ccc;
+            padding: 10px 0;
+            height: 150px;
+        }
+
+        /* Add Animation */
+        .modal-content,
+        #caption {
+            -webkit-animation-name: zoom;
+            -webkit-animation-duration: 0.6s;
+            animation-name: zoom;
+            animation-duration: 0.6s;
+        }
+
+        @-webkit-keyframes zoom {
+            from {
+                -webkit-transform: scale(0)
+            }
+
+            to {
+                -webkit-transform: scale(1)
+            }
+        }
+
+        @keyframes zoom {
+            from {
+                transform: scale(0)
+            }
+
+            to {
+                transform: scale(1)
+            }
+        }
+
+        /* The Close Button */
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* 100% Image Width on Smaller Screens */
+        @media only screen and (max-width: 700px) {
+            .modal-content {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -210,16 +322,23 @@
                     Momen Kami Saat Magang.
                 </p>
             </div>
-            <div class="owl-carousel clients-carousel">
-                <img src="./images/laporan-aris.jpeg" alt="Client Logo">
-                <img src="./images/lapoaran-azhar.jpeg" alt="Client Logo">
-                <img src="./images/laporan-fara.jpeg" alt="Client Logo">
-                <img src="./images/laporan-keysa.jpeg" alt="Client Logo">
-                <img src="./images/image.png" alt="Client Logo">
-                <img src="./images/image.png" alt="Client Logo">
-                <img src="./images/image.png" alt="Client Logo">
-                <img src="./images/image.png" alt="Client Logo">
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="img01">
+                <div id="caption"></div>
             </div>
+            <div class="owl-carousel clients-carousel">
+                <img src="./images/laporan-aris.jpeg" alt="Laporan Aris" class="myImg">
+                <img src="./images/lapoaran-azhar.jpeg" alt="Laporan Azhar" class="myImg">
+                <img src="./images/laporan-fara.jpeg" alt="Laporan Fara" class="myImg">
+                <img src="./images/laporan-keysa.jpeg" alt="Laporan Keysa" class="myImg">
+                <img src="./images/image.png" alt="Client Logo 1" class="myImg">
+                <img src="./images/image.png" alt="Client Logo 2" class="myImg">
+                <img src="./images/image.png" alt="Client Logo 3" class="myImg">
+                <img src="./images/image.png" alt="Client Logo 4" class="myImg">
+            </div>
+
         </div>
     </div>
     <a href="#" class="back-to-top"><i class="ion-ios-arrow-up"></i></a>
@@ -247,7 +366,8 @@
                         <!-- <a href="https://www.facebook.com/profile.php?id=61558868825793" target="_blank" class="fab fa-facebook-f"></a> -->
                         <a href="https://www.instagram.com/morisfii_317/" target="_blank" class="fab fa-instagram"></a>
                         <a href="https://www.youtube.com/@09.mocharisrofii32" class="fab fa-youtube"></a>
-                        <a href="https://github.com/MochArisRofii" target="_blank"><i class="fa fa-brands fa-github"></i></a>
+                        <a href="https://github.com/MochArisRofii" target="_blank"><i
+                                class="fa fa-brands fa-github"></i></a>
                     </div>
                 </div>
             </div>
@@ -282,7 +402,8 @@
                         <!-- <a href="https://www.facebook.com/" class="fab fa-facebook-f"></a> -->
                         <a href="https://www.instagram.com/fazuraa_d/" class="fab fa-instagram"></a>
                         <a href="https://www.youtube.com/@faraazzura" class="fab fa-youtube"></a>
-                        <a href="https://github.com/farraazzura" target="_blank"><i class="fa fa-brands fa-github"></i></a>
+                        <a href="https://github.com/farraazzura" target="_blank"><i
+                                class="fa fa-brands fa-github"></i></a>
                     </div>
                 </div>
             </div>
@@ -299,7 +420,8 @@
                         <!-- <a href="https://www.facebook.com/" class="fab fa-facebook-f"></a> -->
                         <a href="https://www.instagram.com/ghea_keysaa/" class="fab fa-instagram"></a>
                         <a href="https://www.youtube.com/@kysfra1411" class="fab fa-youtube"></a>
-                        <a href="https://github.com/kesyaghea" target="_blank"><i class="fa fa-brands fa-github"></i></a>
+                        <a href="https://github.com/kesyaghea" target="_blank"><i
+                                class="fa fa-brands fa-github"></i></a>
                     </div>
                 </div>
             </div>
@@ -331,6 +453,39 @@
     </div>
 
     <a href="#" class="back-to-top"><i class="ion-ios-arrow-up"></i></a>
+
+    <script>
+        // Get the modal
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the modal image and caption text
+        var modalImg = document.getElementById("img01");
+        var captionText = document.getElementById("caption");
+
+        // Get all images in the carousel
+        var images = document.getElementsByClassName("myImg");
+
+        // Loop through all images and add click event listener
+        for (var i = 0; i < images.length; i++) {
+            images[i].onclick = function () {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+                captionText.innerHTML = this.alt;
+            }
+        }
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+
+    </script>
+
 </body>
 
 </html>
