@@ -35,7 +35,7 @@
                 <li><a href="#about">Project</a></li>
                 <li><a href="organisasi.html">Organisasi</a></li>
                 <li><a href="#team">team</a></li>
-                <li><a href="#contact">contact</a></li>
+                <li><a href="#contact">Informasi</a></li>
                 <!-- <button id="toggle-button">Toggle Dark Mode</button> -->
                 <a id="toggle-button" class="btn"><i class="fas fa-moon"></i></a>
                 <!-- <a href=""><i class="ri-moon-line change-theme" id="toggle-button"></i></a> -->
@@ -86,7 +86,7 @@
                 </div>
 
                 <a data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="2000"
-                    href="aris.html" style="text-decoration: none;" class="col-md-3 col-sm-4">
+                    href="aris.html" style="text-decoration: none;" class=" card-1 col-md-3 col-sm-4">
 
                     <div class="item"> <span class="icon feature_box_col_four"><img src="./images/laravel.png"
                                 style="width: 6rem; height: auto; border-radius: 4rem; margin-bottom: 6px;"
@@ -97,7 +97,7 @@
                 </a>
 
                 <a data-aos="fade-up" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="3000"
-                    href="azhar.html" style="text-decoration: none;" class="col-md-3 col-sm-4">
+                    href="azhar.html" style="text-decoration: none;" class="card-1 col-md-3 col-sm-4">
                     <div class="item"> <span class="icon feature_box_col_five"><img src="./images/flutter.png"
                                 style="width: 5rem; height: auto; border-radius: 4rem; margin-bottom: 6px;"
                                 alt=""></span>
@@ -106,7 +106,7 @@
                     </div>
                 </a>
                 <a data-aos="fade-up" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="3000"
-                    href="fara.html" style="text-decoration: none;" class="col-md-3 col-sm-4">
+                    href="fara.html" style="text-decoration: none;" class="card-1 col-md-3 col-sm-4">
                     <div class="item"> <span class="icon feature_box_col_six"><img src="./images/botpress.jpg"
                                 style="width: 5rem; height: auto; border-radius: 4rem; margin-bottom: 6px;"
                                 alt=""></span>
@@ -115,7 +115,7 @@
                     </div>
                 </a>
                 <a data-aos="fade-left" data-aos-easing="ease-in-sine" data-aos-offset="300" data-aos-duration="2000"
-                    href="keysa.html" style="text-decoration: none;" class="col-md-3 col-sm-4">
+                    href="keysa.html" style="text-decoration: none;" class="card-1 col-md-3 col-sm-4">
                     <div class="item"> <span class="icon feature_box_col_six"><img src="./images/nobox.jpg"
                                 style="width: 5rem; height: auto; border-radius: 4rem; margin-bottom: 6px;"
                                 alt=""></span>
@@ -248,10 +248,10 @@
                 <img src="./images/lapoaran-azhar.jpeg" alt="" class="myImg">
                 <img src="./images/laporan-fara.jpeg" alt="" class="myImg">
                 <img src="./images/laporan-keysa.jpeg" alt="" class="myImg">
-                <img src="./images/image.png" alt="Client Logo 1" class="myImg">
-                <img src="./images/image.png" alt="Client Logo 2" class="myImg">
-                <img src="./images/image.png" alt="Client Logo 3" class="myImg">
-                <img src="./images/image.png" alt="Client Logo 4" class="myImg">
+                <img src="./images/prestasi-aris.jpg" alt="" class="myImg">
+                <img src="./images/image.png" alt="" class="myImg">
+                <img src="./images/image.png" alt="" class="myImg">
+                <img src="./images/image.png" alt="" class="myImg">
             </div>
 
         </div>
@@ -427,9 +427,17 @@
     <script>
         document.getElementById('toggle-button').addEventListener('click', function () {
             document.body.classList.toggle('dark-mode');
+            var icon = document.querySelector('#toggle-button i');
+            if (document.body.classList.contains('dark-mode')) {
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            } else {
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+            }
         });
-
     </script>
+
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         AOS.init();
