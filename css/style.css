@@ -20,7 +20,7 @@ body {
     overflow-x: hidden;
     font-family: Arial, Helvetica, sans-serif;
     background-color: white;
-    color: black;
+    /* color: black; */
     transition: background-color 0.3s, color 0.3s;
 }
 
@@ -37,7 +37,7 @@ body.dark-mode .footer,
 body.dark-mode .container .section-header h2,
 body.dark-mode .container .section-header p,
 body.dark-mode .container .project,
-body.dark-mode .container .project p,
+body.dark-mode .container .project p#project,
 /* body.dark-mode .container .project p, */
 body.dark-mode .project a div {
     background-color: rgb(0, 0, 0);
@@ -67,7 +67,7 @@ body.dark-mode .navbar a {
 
 body.dark-mode .btn {
     /* background-color: none; */
-    color: white;
+    /* color: blue; */
     border: none;
 }
 
@@ -91,19 +91,19 @@ a {
     cursor: pointer;
 }
 
-body.dark-mode {
+/* body.dark-mode {
     background-color: #000000;
     color: white;
-}
+} */
 
-a {
-    padding: 10px;
+/* a { */
+    /* padding: 10px; */
     /* margin-top: 20px; */
-    cursor: pointer;
-    border: none;
+    /* cursor: pointer; */
+    /* border: none; */
     /* border-radius: 10rem; */
 
-}
+/* } */
 
 a i {
     font-size: 20px;
@@ -530,7 +530,7 @@ a i {
 
 .item:hover h6,
 .item:hover p {
-    color: #2b6777;
+    color: #000000;
     -webkit-transition: all 0.5s ease 0s;
     transition: all 0.5s ease 0s;
 }
@@ -981,15 +981,32 @@ a i {
     text-decoration: none;
 }
 
+.team .row .card .info .icons-1 .fa-youtube:hover,
+.footer .icons .fa-youtube:hover {
+    color: red;
+    text-decoration: none;
+}
+
 .team .row .card .info .icons .fa-instagram:hover,
 .footer .icons .fa-instagram:hover {
     color: #C13584;
     text-decoration: none;
 }
+.team .row .card .info .icons-1 .fa-instagram:hover,
+.footer .icons .fa-instagram:hover {
+    color: #C13584;
+    text-decoration: none;
+}
 
-.team .row .card .info .icons .fa-linkedin:hover,
+.team .row .card .info .icons .fa-github:hover,
 .footer .icons .fa-linkedin:hover {
-    color: #2867B2;
+    color: #291212;
+    text-decoration: none;
+}
+
+.team .row .card .info .icons-1 .fa-github:hover,
+.footer .icons .fa-linkedin:hover {
+    color: #291212;
     text-decoration: none;
 }
 
