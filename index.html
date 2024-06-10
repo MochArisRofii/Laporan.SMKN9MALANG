@@ -24,6 +24,20 @@
     <style>
         body {
             font-family: Arial, Helvetica, sans-serif;
+            background-color: white;
+            color: black;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        body.dark-mode {
+            background-color: #121212;
+            color: white;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin-top: 20px;
+            cursor: pointer;
         }
 
         #myImg {
@@ -146,6 +160,7 @@
                 <li><a href="organisasi.html">Organisasi</a></li>
                 <li><a href="#team">team</a></li>
                 <li><a href="#contact">contact</a></li>
+                <!-- <button id="toggle-button">Toggle Dark Mode</button> -->
             </ul>
         </nav>
     </header>
@@ -162,9 +177,12 @@
         <h1 class="heading">Apa yang kita dapatkan setelah magang di PT. UBIG</h1>
         <div class="row">
             <div class="content">
-                <h3>yang kita dapatkan adalah</h3>
-                <p>Dari PT. UBIG kita mendapatkan banyak sekali<b> ilmu, dan pengalaman.</b><br>
-                    Dari program yang dijalankan, kebiasaan, peraturan, membuat kita menjadi anak yang disiplin </p>
+                <!-- <h3>yang kita Peroleh adalah</h3> -->
+                <p>Kami memperoleh banyak sekali ilmu dan pengalaman berharga dari PT. UBIG. <b> Melalui program-program
+                        yang dijalankan, serta kebiasaan dan peraturan yang diterapkan, kami menjadi pribadi yang lebih
+                        disiplin dan bertanggung jawab. </b><br>
+                    PT. UBIG tidak hanya memberikan pelajaran akademis, tetapi juga membentuk karakter dan etika kerja
+                    yang kuat. </p>
             </div>
         </div>
     </section>
@@ -180,37 +198,40 @@
                     </p>
                 </div>
 
-                <div class="col-md-3 col-sm-4">
+                <a href="aris.html" style="text-decoration: none;" class="col-md-3 col-sm-4">
 
-                    <div class="item"> <span class="icon feature_box_col_four"><i class="fa fa-user"></i></span>
+                    <div class="item"> <span class="icon feature_box_col_four"><img src="./images/laravel.png"
+                                style="width: 6rem; height: auto; border-radius: 4rem; margin-bottom: 6px;"
+                                alt=""></span>
                         <h6>Moch Aris Rofii</h6>
-
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor
-                            Aenean massa.<br><br><br></p>
+                        <p>Silahkan Klik Untuk Melihat Lebih Detail Tentang Project Yang Di Kerjakan <br><br><br></p>
                     </div>
-                </div>
+                </a>
 
-                <div class="col-md-3 col-sm-4">
-                    <div class="item"> <span class="icon feature_box_col_five"><i class="fa fa-user"></i></span>
+                <a href="azhar.html" style="text-decoration: none;" class="col-md-3 col-sm-4">
+                    <div class="item"> <span class="icon feature_box_col_five"><img src="./images/flutter.png"
+                                style="width: 5rem; height: auto; border-radius: 4rem; margin-bottom: 6px;"
+                                alt=""></span>
                         <h6>Azhar Zakaria Bintang</h6>
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor
-                            Aenean massa.<br><br><br></p>
+                        <p>Silahkan Klik Untuk Melihat Lebih Detail Tentang Project Yang Di Kerjakan<br><br><br></p>
                     </div>
-                </div>
-                <div class="col-md-3 col-sm-4">
-                    <div class="item"> <span class="icon feature_box_col_six"><i class="fa fa-user"></i></span>
+                </a>
+                <a href="fara.html" style="text-decoration: none;" class="col-md-3 col-sm-4">
+                    <div class="item"> <span class="icon feature_box_col_six"><img src="./images/botpress.jpg"
+                                style="width: 5rem; height: auto; border-radius: 4rem; margin-bottom: 6px;"
+                                alt=""></span>
                         <h6>Fara Azzura Dasgupta</h6>
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor
-                            Aenean massa.<br><br><br></p>
+                        <p>Silahkan Klik Untuk Melihat Lebih Detail Tentang Project Yang Di Kerjakan<br><br><br></p>
                     </div>
-                </div>
-                <div class="col-md-3 col-sm-4">
-                    <div class="item"> <span class="icon feature_box_col_six"><i class="fa fa-user"></i></span>
+                </a>
+                <a href="keysa.html" style="text-decoration: none;" class="col-md-3 col-sm-4">
+                    <div class="item"> <span class="icon feature_box_col_six"><img src="./images/nobox.jpg"
+                                style="width: 5rem; height: auto; border-radius: 4rem; margin-bottom: 6px;"
+                                alt=""></span>
                         <h6>Keysa Ghea</h6>
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor
-                            Aenean massa.<br><br><br></p>
+                        <p>Silahkan Klik Untuk Melihat Lebih Detail Tentang Project Yang Di Kerjakan<br><br><br></p>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
     </div>
@@ -332,10 +353,10 @@
                 <div id="caption"></div>
             </div>
             <div class="owl-carousel clients-carousel">
-                <img src="./images/laporan-aris.jpeg" alt="Laporan Aris" class="myImg">
-                <img src="./images/lapoaran-azhar.jpeg" alt="Laporan Azhar" class="myImg">
-                <img src="./images/laporan-fara.jpeg" alt="Laporan Fara" class="myImg">
-                <img src="./images/laporan-keysa.jpeg" alt="Laporan Keysa" class="myImg">
+                <img src="./images/laporan-aris.jpeg" alt="" class="myImg">
+                <img src="./images/lapoaran-azhar.jpeg" alt="" class="myImg">
+                <img src="./images/laporan-fara.jpeg" alt="" class="myImg">
+                <img src="./images/laporan-keysa.jpeg" alt="" class="myImg">
                 <img src="./images/image.png" alt="Client Logo 1" class="myImg">
                 <img src="./images/image.png" alt="Client Logo 2" class="myImg">
                 <img src="./images/image.png" alt="Client Logo 3" class="myImg">
@@ -401,7 +422,7 @@
                 <div class="info">
                     <h3>Fara Azzura Dasgupta</h3>
                     <span>Frontend & Digital Marketing</span>
-                    <div class="icons-1">
+                    <div class="icons">
                         <!-- <a href="https://www.facebook.com/" class="fab fa-facebook-f"></a> -->
                         <a href="https://www.instagram.com/fazuraa_d/" class="fab fa-instagram"></a>
                         <a href="https://www.youtube.com/@faraazzura" class="fab fa-youtube"></a>
@@ -434,14 +455,29 @@
     <section id="contact" class="contact">
         <h1 class="heading">Lokasi</h1>
     </section>
-    <div class="contact-in">
-        <div class="contact-map">
-            <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30711243.17762776!2d64.4398422293091!3d20.011408266548177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30635ff06b92b791%3A0xd78c4fa1854213a6!2sIndia!5e0!3m2!1sen!2sin!4v1644684739958!5m2!1sen!2sin" width="100%" height="auto" style="border:0;" allowfullscreen="" loading="lazy"></iframe> -->
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.750114566968!2d112.61655497405192!3d-7.9211491788571875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e78820f3c402d5f%3A0x4e18acbe52d7454b!2sPT%20Universal%20Big%20Data%20(UBIG)!5e0!3m2!1sid!2sid!4v1717403347744!5m2!1sid!2sid"
-                width="100%" height="auto" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    <div class="contact-wrap">
+        <div class="contact-in">
+            <h1>PT Universal Big Data</h1>
+            <h2><i class="fa fa-phone" aria-hidden="true"></i> Telepon</h2>
+            <p>0812-1212-2388</p>
+            <h2><i class="fa fa-envelope" aria-hidden="true"></i> Email</h2>
+            <p>suratkita@gmail.com</p>
+            <h2><i class="fa fa-map-marker" aria-hidden="true"></i> Address</h2>
+            <p>Ruko Modern Kav A16-A17, Jl Loncat Indah, Tasikmadu, Kota Malang 65143</p>
+            <ul>
+                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-google" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+            </ul>
         </div>
 
+        <div class="contact-in">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31612.375854363763!2d112.59239694560968!3d-7.942288588834501!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e78820f3c402d5f%3A0x4e18acbe52d7454b!2sPT%20Universal%20Big%20Data%20(UBIG)!5e0!3m2!1sid!2sid!4v1717861720853!5m2!1sid!2sid"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
     </div>
 
     <div class="footer">

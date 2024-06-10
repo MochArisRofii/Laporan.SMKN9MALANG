@@ -1,21 +1,16 @@
+// main.js
 $(document).ready(function () {
-
-    $('.fa-bars').click(function () {
-        $(this).toggleClass('fa-times');
-        $('.navbar').toggleClass('nav-toggle');
-    });
-
     $(window).on('load scroll', function () {
-        $('.fa-bars').removeClass('fa-times');
-        $('.navbar').removeClass('nav-toggle');
-
         if ($(window).scrollTop() > 35) {
             $('.header').css({ 'background': 'linear-gradient(to left, #ff0000, #8b0000, #000000)', 'box-shadow': '0 .2rem .5rem rgba(0,0,0,.4)' });
-        }
-        else {
+        } else {
             $('.header').css({ 'background': 'none', 'box-shadow': 'none' });
         }
     });
+
+
+
+
 
     const counters = document.querySelectorAll('.counter');
     const speed = 120;
@@ -94,6 +89,6 @@ $(document).ready(function () {
         $(this).children('span').text('-');
     });
 
-    
+
 
 });
