@@ -847,7 +847,7 @@ body {
 	color: white;
 	border-radius: 2rem;
 	box-shadow: 0px 0px 10px 0px #666;
-	background: linear-gradient(to left, #ff0000, #8b0000, #000000);
+	background: linear-gradient(to top left, #b80000, #1f0000, #000000);
 }
 
 .contact-in:nth-child(2) {
@@ -869,26 +869,26 @@ body {
 }
 
 .contact-in h2 {
-	font-size: 20px;
-	font-weight: 400;
+	font-size: 25px;
+	font-weight: bold;
 	margin-bottom: 15px;
 }
 
 .contact-in h2 i {
-	font-size: 16px;
+	font-size: 20px;
 	width: 40px;
 	height: 40px;
 	margin-right: 10px;
-	background: #f5f5f5;
-	color: #000;
+	background: #cf0000;
+	color: white;
 	border-radius: 50px;
 	line-height: 40px;
 	text-align: center;
 }
 
 .contact-in p {
-	font-size: 14px;
-	font-weight: 300;
+	font-size: 20px;
+	font-weight: 400;
 	margin-bottom: 20px;
 }
 
@@ -909,14 +909,14 @@ body {
 	width: 30px;
 	height: 30px;
 	text-align: center;
-	background: #fff;
+	background: #cf0000;
 	border-radius: 50px;
 }
 
 .contact-in ul li a i {
 	font-size: 14px;
 	line-height: 30px;
-	color: #000;
+	color: #ffffff;
 }
 
 
