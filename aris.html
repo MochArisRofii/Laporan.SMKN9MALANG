@@ -35,7 +35,7 @@
                 <li><a href="index.html#about">Project</a></li>
                 <li><a href="organisasi.html">Organisasi</a></li>
                 <li><a href="index.html#team">Team</a></li>
-                <li><a href="index.html#contact">Informsi</a></li>
+                <li><a href="index.html#contact">Informasi</a></li>
                 <!-- <button id="toggle-button">Toggle Dark Mode</button> -->
                 <a id="toggle-button" class="btn"><i class="fas fa-moon"></i></a>
                 <!-- <a href=""><i class="ri-moon-line change-theme" id="toggle-button"></i></a> -->
@@ -43,11 +43,27 @@
         </nav>
     </header>
 
+
+
+
+
     <script>
         document.getElementById('toggle-button').addEventListener('click', function () {
             document.body.classList.toggle('dark-mode');
-        });
+            var icon = document.querySelector('#toggle-button i');
+            if (document.body.classList.contains('dark-mode')) {
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun', 'animate');
+            } else {
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon', 'animate');
+            }
 
+            // Hapus kelas 'animate' setelah animasi selesai (0.5 detik)
+            setTimeout(function () {
+                icon.classList.remove('animate');
+            }, 500); // Sesuaikan dengan durasi animasi di dalam CSS
+        });
     </script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>

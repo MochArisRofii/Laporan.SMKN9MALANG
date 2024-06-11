@@ -87,6 +87,7 @@ body.dark-mode .project a div {
 body.dark-mode .container .project a.card-1 div.item {
     box-shadow: 0 4px 8px 0 rgba(192, 192, 192, 0.5), 0 6px 20px 0 rgba(192, 192, 192, 0.4);
 }
+
 body.dark-mode .org-chart .level .position {
     box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
 }
@@ -362,6 +363,9 @@ a i {
     background: #00bfff;
 }
 
+
+
+
 .header {
     display: flex;
     align-items: center;
@@ -415,6 +419,29 @@ a i {
     display: none;
 }
 
+/* styles.css */
+#toggle-button {
+    transition: background-color 0.3s ease-in-out;
+    /* Transisi untuk background tombol */
+}
+
+#toggle-button i {
+    color: #fff;
+    /* Warna putih untuk light mode */
+    transition: opacity 0.3s ease-in-out;
+    /* Transisi untuk opacity ikon */
+}
+
+#toggle-button i.animate {
+    opacity: 0;
+    /* Mulai dengan opacity 0 */
+}
+
+.dark-mode #toggle-button i {
+    color: #fff;
+    /* Warna putih untuk dark mode */
+}
+
 .home {
     min-height: 100vh;
     width: 100vw;
@@ -438,7 +465,6 @@ a i {
     right: 0;
     bottom: 0;
     background: rgba(0, 0, 0, 0.5);
-    /* Warna hitam dengan opasitas 0.5 */
     z-index: 1;
 }
 
@@ -489,6 +515,16 @@ a i {
         background-position-x: 100rem;
     }
 }
+
+.dark-mode .home .wave,
+.dark-mode .home .wave2,
+.dark-mode .home .wave3 {
+    background: url(../images/Vector_1.png);
+    background-size: 100rem 11rem;
+    background-repeat: repeat-x;
+}
+
+
 
 .about {
     min-height: 55vh;
@@ -550,11 +586,13 @@ a i {
     background: #fff;
     text-align: center;
     padding: 30px 25px;
-    box-shadow: 0 0 25px rgba(0, 0, 0, 0.2); /* Bayangan lebih gelap */
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+    /* Bayangan lebih gelap */
     border-radius: 20px;
     margin-bottom: 30px;
     margin-top: -2rem;
-    border: 5px solid black; /* Border lebih gelap */
+    border: 5px solid black;
+    /* Border lebih gelap */
     -webkit-transition: all 0.5s ease 0s;
     transition: all 0.5s ease 0s;
 }
@@ -1369,7 +1407,7 @@ a i {
     }
 }
 
-/* .back-to-top {
+.back-to-top {
     position: fixed;
     display: none;
     background-color: #00bfff;
@@ -1393,7 +1431,7 @@ a i {
 
 .back-to-top i:hover {
     color: black;
-} */
+}
 
 .faq {
     min-height: 70vh;
