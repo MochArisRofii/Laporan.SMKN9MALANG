@@ -1,4 +1,3 @@
-// main.js
 $(document).ready(function () {
     $(window).on('load scroll', function () {
         if ($(window).scrollTop() > 35) {
@@ -7,10 +6,6 @@ $(document).ready(function () {
             $('.header').css({ 'background': 'none', 'box-shadow': 'none' });
         }
     });
-
-
-
-
 
     const counters = document.querySelectorAll('.counter');
     const speed = 120;
@@ -31,14 +26,13 @@ $(document).ready(function () {
 
             if (count < target) {
                 count = count + inc;
-                // Check if the counter is for "Working Hours"
                 const isWorkingHours = counter.nextElementSibling.innerText === 'Jam Kerja';
                 if (isWorkingHours) {
                     counter.innerText = formatTime(Math.floor(count));
                 } else {
                     counter.innerText = Math.floor(count);
                 }
-                setTimeout(updateCount, 10); // Adjusted to 10ms for smoother increment
+                setTimeout(updateCount, 10);
             } else {
                 const isWorkingHours = counter.nextElementSibling.innerText === 'Jam Kerja';
                 if (isWorkingHours) {
@@ -51,6 +45,7 @@ $(document).ready(function () {
 
         updateCount();
     });
+
     (function ($) {
         "use strict";
 
@@ -89,6 +84,32 @@ $(document).ready(function () {
         $(this).children('span').text('-');
     });
 
+    // // Tambahan untuk mode gelap
+    // function toggleDarkMode() {
+    //     document.body.classList.toggle('dark-mode');
+    //     var icon = document.querySelector('#toggle-button i');
+    //     if (document.body.classList.contains('dark-mode')) {
+    //         icon.classList.remove('fa-moon');
+    //         icon.classList.add('fa-sun', 'animate');
+    //         localStorage.setItem('darkMode', 'enabled');
+    //     } else {
+    //         icon.classList.remove('fa-sun');
+    //         icon.classList.add('fa-moon', 'animate');
+    //         localStorage.setItem('darkMode', 'disabled');
+    //     }
+    //     setTimeout(function () {
+    //         icon.classList.remove('animate');
+    //     }, 500);
+    // }
 
+    // document.getElementById('toggle-button').addEventListener('click', toggleDarkMode);
 
+    // window.addEventListener('DOMContentLoaded', (event) => {
+    //     if (localStorage.getItem('darkMode') === 'enabled') {
+    //         document.body.classList.add('dark-mode');
+    //         var icon = document.querySelector('#toggle-button i');
+    //         icon.classList.remove('fa-moon');
+    //         icon.classList.add('fa-sun');
+    //     }
+    // });
 });

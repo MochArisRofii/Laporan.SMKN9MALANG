@@ -33,7 +33,7 @@
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="index.html#about">Project</a></li>
-                <li><a href="organisasi.html">Organisasi</a></li>
+                <li><a href="organisasi.html">Profil Ubig</a></li>
                 <li><a href="index.html#team">Team</a></li>
                 <li><a href="index.html#contact">Informasi</a></li>
                 <!-- <button id="toggle-button">Toggle Dark Mode</button> -->
@@ -49,21 +49,32 @@
 
 
     <script>
-        document.getElementById('toggle-button').addEventListener('click', function () {
+        function toggleDarkMode() {
             document.body.classList.toggle('dark-mode');
             var icon = document.querySelector('#toggle-button i');
             if (document.body.classList.contains('dark-mode')) {
                 icon.classList.remove('fa-moon');
                 icon.classList.add('fa-sun', 'animate');
+                localStorage.setItem('darkMode', 'enabled');
             } else {
                 icon.classList.remove('fa-sun');
                 icon.classList.add('fa-moon', 'animate');
+                localStorage.setItem('darkMode', 'disabled');
             }
-
-            // Hapus kelas 'animate' setelah animasi selesai (0.5 detik)
             setTimeout(function () {
                 icon.classList.remove('animate');
-            }, 500); // Sesuaikan dengan durasi animasi di dalam CSS
+            }, 500);
+        }
+
+        document.getElementById('toggle-button').addEventListener('click', toggleDarkMode);
+
+        window.addEventListener('DOMContentLoaded', (event) => {
+            if (localStorage.getItem('darkMode') === 'enabled') {
+                document.body.classList.add('dark-mode');
+                var icon = document.querySelector('#toggle-button i');
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            }
         });
     </script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
