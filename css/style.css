@@ -11,6 +11,10 @@
     scroll-behavior: smooth;
 }
 
+/* .header .navbar {
+    
+} */
+
 .org-chart {
     text-align: center;
     padding-top: 6rem;
@@ -402,6 +406,8 @@ a i {
     left: 0;
     z-index: 100;
     position: fixed;
+    background: linear-gradient(to left, #ff0000, #8b0000, #000000); 
+    box-shadow: 0 .2rem .5rem rgba(0,0,0,.4);
 }
 
 .header .logo img {
@@ -732,7 +738,7 @@ a i {
 
 .counters .container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 30px;
     text-align: center;
 }

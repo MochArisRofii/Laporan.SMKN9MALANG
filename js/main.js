@@ -1,11 +1,11 @@
 $(document).ready(function () {
-    $(window).on('load scroll', function () {
-        if ($(window).scrollTop() > 35) {
-            $('.header').css({ 'background': 'linear-gradient(to left, #ff0000, #8b0000, #000000)', 'box-shadow': '0 .2rem .5rem rgba(0,0,0,.4)' });
-        } else {
-            $('.header').css({ 'background': 'none', 'box-shadow': 'none' });
-        }
-    });
+    // $(window).on('load scroll', function () {
+    //     if ($(window).scrollTop() > 35) {
+    //         $('.header').css({ 'background': 'linear-gradient(to left, #ff0000, #8b0000, #000000)', 'box-shadow': '0 .2rem .5rem rgba(0,0,0,.4)' });
+    //     } else {
+    //         $('.header').css({ 'background': 'none', 'box-shadow': 'none' });
+    //     }
+    // });
 
     const counters = document.querySelectorAll('.counter');
     const speed = 120;
@@ -26,17 +26,26 @@ $(document).ready(function () {
 
             if (count < target) {
                 count = count + inc;
+                if (count > target) count = target;  // Ensure count does not exceed target
                 const isWorkingHours = counter.nextElementSibling.innerText === 'Jam Kerja';
-                if (isWorkingHours) {
+                const isEndOfDay = counter.nextElementSibling.innerText === 'Jam Pulang';
+                const isTeam = counter.nextElementSibling.innerText === 'Team';
+                if (isWorkingHours || isEndOfDay) {
                     counter.innerText = formatTime(Math.floor(count));
+                } else if (isTeam) {
+                    counter.innerText = Math.floor(count);
                 } else {
                     counter.innerText = Math.floor(count);
                 }
                 setTimeout(updateCount, 10);
             } else {
                 const isWorkingHours = counter.nextElementSibling.innerText === 'Jam Kerja';
-                if (isWorkingHours) {
+                const isEndOfDay = counter.nextElementSibling.innerText === 'Jam Pulang';
+                const isTeam = counter.nextElementSibling.innerText === 'Team';
+                if (isWorkingHours || isEndOfDay) {
                     counter.innerText = formatTime(target);
+                } else if (isTeam) {
+                    counter.innerText = target;
                 } else {
                     counter.innerText = target;
                 }
@@ -45,6 +54,7 @@ $(document).ready(function () {
 
         updateCount();
     });
+
 
     (function ($) {
         "use strict";
