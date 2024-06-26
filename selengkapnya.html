@@ -28,10 +28,70 @@
         body.dark-mode .container img {
             box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
         }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.9);
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            box-sizing: border-box;
+            padding: 20px;
+            /* tambahkan padding agar konten tidak menempel pada tepi */
+        }
+
+        .modal img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            /* agar gambar tetap proporsional */
+            margin: auto;
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            max-width: 90%;
+            max-height: 90%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            animation-name: zoom;
+            animation-duration: 0.6s;
+            object-fit: contain;
+            /* agar gambar tetap proporsional */
+        }
+
+        @keyframes zoom {
+            from {
+                transform: scale(0);
+            }
+
+            to {
+                transform: scale(1);
+            }
+        }
+
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            /* color: #f1f1f1; */
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+            cursor: pointer;
+        }
     </style>
 </head>
 
-<body>
+<body id="body">
 
     <header class="header">
         <a href="index.html" class="logo"><img src="./images/ubig.png" alt=""></a>
@@ -58,12 +118,13 @@
     <div class="container" style="padding-top: 10rem;">
         <div class="row">
             <div class="col-md-6">
-                <img src="./images/laporan2.jpg" style="margin-right: 10px; width: 30rem; height: auto; border-radius: 3rem;" alt="">
+                <img src="./images/laporan2.jpg"
+                    style="margin-right: 10px; width: 30rem; height: auto; border-radius: 3rem;" alt="">
                 <img src="./images/pin aris.jpg" style="width: 20rem; border-radius: 3rem;" alt="">
             </div>
             <div class="col-md-6" style="padding-top: 7rem;">
                 <h3 style="text-align: center;"><b>Kehadiran:</b></h3>
-                <h4 style="padding-top: 2rem;">Praktik kerja lapangan di PT. Universal Big Data berlangsung 5 hari   </h4>
+                <h4 style="padding-top: 2rem;">Praktik kerja lapangan di PT. Universal Big Data berlangsung 5 hari </h4>
                 <h4 style="padding-top: 1rem;">seminggu, dari pukul 07.30 hingga 16.30. </h4>
                 <!-- <h4 style="padding-top: 1rem;">finger print.</h4> -->
             </div>
@@ -74,12 +135,13 @@
         <div class="row">
             <div class="col-md-6" style="padding-top: 6rem;">
                 <h3 style="text-align: center;"><b>Pagi Hari</b></h3>
-                <h4 style="padding-top: 1rem;">Senin hingga Kamis dimulai dengan murajaah yasin dan setoran  </h4>
+                <h4 style="padding-top: 1rem;">Senin hingga Kamis dimulai dengan murajaah yasin dan setoran </h4>
                 <h4 style="padding-top: 1rem;">hafalan sebelum mengerjakan proyek. </h4>
                 <!-- <h4 style="padding-top: 1rem;">yasin pagi)</h4> -->
             </div>
             <div class="col-md-6" style="display: flex; justify-content: center;">
-                <img src="./images/laporan1.jpg" style="margin-right: 10px; width: 40rem; height: auto; border-radius: 3rem;" alt="">
+                <img src="./images/laporan1.jpg"
+                    style="margin-right: 10px; width: 40rem; height: auto; border-radius: 3rem;" alt="">
             </div>
         </div>
     </div>
@@ -87,7 +149,8 @@
     <div class="container" style="padding-top: 10rem;">
         <div class="row">
             <div class="col-md-6" style="display: flex; justify-content: center; align-items: center;">
-                <img src="./images/bg1.jpg" style="width: 40rem; height: auto; border-radius: 3rem; margin-right: 12px;" alt="">
+                <img src="./images/bg1.jpg" style="width: 40rem; height: auto; border-radius: 3rem; margin-right: 12px;"
+                    alt="">
                 <!-- <img src="./images/lapoaran-azhar.jpeg" style=" width: 20rem; height: auto; border-radius: 3rem;" alt=""> -->
                 <!-- <img src="./images/laporan-fara.jpeg" style=" width: 25rem; height: auto; border-radius: 3rem; margin-top: 15px; margin-right: 12px;" alt=""> -->
                 <!-- <img src="./images/laporan-aris.jpeg" style=" width: 25rem; height: auto; border-radius: 3rem;" alt=""> -->
@@ -108,10 +171,15 @@
                 <h4 style="padding-top: 1rem;">proyek individu. </h4>
             </div>
             <div class="col-md-6">
-                <img src="./images/lapoaran-azhar.jpeg" style="width: 30rem; height: 20rem; border-radius: 3rem; margin-right: 12px;" alt="">
-                <img src="./images/laporan-aris.jpeg" style="width: 20rem; height: auto; border-radius: 3rem; margin-right: 12px;" alt="">
-                <img src="./images/prestasi-aris.jpg" style="width: 20rem; height: 13rem; border-radius: 3rem; margin-right: 12px;" alt="">
-                <img src="./images/laporan-fara.jpeg" style="width: 30rem; height: 20rem; border-radius: 3rem; margin-right: 12px; margin-top: 1rem;" alt="">
+                <img src="./images/lapoaran-azhar.jpeg"
+                    style="width: 30rem; height: 20rem; border-radius: 3rem; margin-right: 12px;" alt="">
+                <img src="./images/laporan-aris.jpeg"
+                    style="width: 20rem; height: auto; border-radius: 3rem; margin-right: 12px;" alt="">
+                <img src="./images/prestasi-aris.jpg"
+                    style="width: 20rem; height: 13rem; border-radius: 3rem; margin-right: 12px;" alt="">
+                <img src="./images/laporan-fara.jpeg"
+                    style="width: 30rem; height: 20rem; border-radius: 3rem; margin-right: 12px; margin-top: 1rem;"
+                    alt="">
             </div>
         </div>
     </div>
@@ -119,7 +187,8 @@
     <div class="container" style="padding-top: 10rem;">
         <div class="row">
             <div class="col-md-6" style="display: flex; justify-content: center; align-items: center;">
-                <img src="./images/pushup.jpg" style="width: 40rem; height: auto; border-radius: 3rem; margin-right: 12px;" alt="">
+                <img src="./images/pushup.jpg"
+                    style="width: 40rem; height: auto; border-radius: 3rem; margin-right: 12px;" alt="">
                 <!-- <img src="./images/pushup-fara.jpg" style="width: 20rem; height: auto; border-radius: 3rem; margin-right: 12px;" alt=""> -->
             </div>
             <div class="col-md-6" style="padding-top: 6rem;">
@@ -129,6 +198,127 @@
         </div>
     </div>
 
+    <div class="container" style="padding-top: 10rem;">
+        <div class="row">
+            <div class="col-md-6" style="padding-top: 7rem;">
+                <h4 style="padding-top: 1rem;">Saat waktu sholat dhuhur dan ashar, semua muslim melaksanakan</h4>
+                <h4 style="padding-top: 1rem;">sholat berjamaah dan istirahat.</h4>
+            </div>
+            <div class="col-md-6" style="display: flex; justify-content: center; align-items: center;">
+                <img src="./images/pushup.jpg" style="width: 40rem; height: auto; border-radius: 3rem;  " alt="">
+            </div>
+        </div>
+    </div>
+
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+    </div>
+
+    <div class="container" style="padding-top: 10rem;">
+        <div class="row">
+            <div class="col-md-6" style="display: flex; justify-content: center; align-items: center;">
+                <img src="./images/foto saat pulang.png"
+                    style="margin-right: 10px; width: 30rem; height: auto; border-radius: 3rem;" alt="">
+                <img src="./images/laporan-tele.png" style="width: 20rem; border-radius: 3rem;" alt="" class="myImg">
+            </div>
+            <div class="col-md-6" style="padding-top: 3rem;">
+                <h4 style="padding-top: 1rem;">Sepuluh menit sebelum pulang, jurnal PKL dikumpulkan dan doa </h4>
+                <h4 style="padding-top: 1rem;">pulang dipimpin bergantian oleh anak laki-laki. Laporan harian </h4>
+                <h4 style="padding-top: 1rem;">tentang progres dikirim di grup koordinasi setiap hari, sedangkan </h4>
+                <h4 style="padding-top: 1rem;">pada hari Jumat dalam bentuk video. Ketidakpatuhan melapor juga </h4>
+                <h4 style="padding-top: 1rem;">dihukum push up.</h4>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" style="padding-top: 10rem; padding-bottom: 10rem;">
+        <div class="row">
+            <div class="col-md-6" style="padding-top: 10rem;">
+                <h4 style="padding-top: 1rem;">1 bulan sebelum masa magang berakhir anak-anak magang </h4>
+                <h4 style="padding-top: 1rem;">diwajibkan untuk setoran hafalan ke CEO UBIG yaitu Bapak Fatkul </h4>
+                <h4 style="padding-top: 1rem;">Amri, ini juga merupakan syarat kelulusan magang di UBIG jadi </h4>
+                <h4 style="padding-top: 1rem;">setiap anak magang harus hafal dan lulus setoran. </h4>
+            </div>
+            <div class="col-md-6" style="display: flex; justify-content: center; align-items: center;">
+                <img src="./images/setoran.jpg" style="width: 40rem; height: auto; border-radius: 3rem; " alt="">
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script>
+        // Get the modal
+        // Get the modal
+        document.addEventListener("DOMContentLoaded", function () {
+            var modal = document.getElementById("myModal");
+            var modalImg = document.getElementById("img01");
+            var captionText = document.getElementById("caption");
+            var images = document.getElementsByClassName("myImg");
+            var span = document.getElementsByClassName("close")[0];
+            var body = document.body;
+
+            for (var i = 0; i < images.length; i++) {
+                images[i].onclick = function () {
+                    modal.style.display = "flex";
+                    body.style.overflow = "hidden";
+                    modalImg.src = this.src;
+                    captionText.innerHTML = this.alt;
+                };
+            }
+
+            span.onclick = function () {
+                modal.style.display = "none";
+                body.style.overflow = "auto";
+            };
+
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                    body.style.overflow = "auto";
+                }
+            };
+
+            window.onresize = function () {
+                modalImg.style.maxHeight = (window.innerHeight - 40) + "px"; // Sesuaikan max-height dengan padding modal
+                modalImg.style.maxWidth = (window.innerWidth - 40) + "px"; // Sesuaikan max-width dengan padding modal
+            };
+        });
+
+
+    </script>
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+            var icon = document.querySelector('#toggle-button i');
+            if (document.body.classList.contains('dark-mode')) {
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun', 'animate');
+                localStorage.setItem('darkMode', 'enabled');
+            } else {
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon', 'animate');
+                localStorage.setItem('darkMode', 'disabled');
+            }
+            setTimeout(function () {
+                icon.classList.remove('animate');
+            }, 500);
+        }
+
+        document.getElementById('toggle-button').addEventListener('click', toggleDarkMode);
+
+        window.addEventListener('DOMContentLoaded', (event) => {
+            if (localStorage.getItem('darkMode') === 'enabled') {
+                document.body.classList.add('dark-mode');
+                var icon = document.querySelector('#toggle-button i');
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            }
+        });
+    </script>
 
     <script>
         // Get the modal
@@ -166,35 +356,6 @@
             };
         });
 
-    </script>
-    <script>
-        function toggleDarkMode() {
-            document.body.classList.toggle('dark-mode');
-            var icon = document.querySelector('#toggle-button i');
-            if (document.body.classList.contains('dark-mode')) {
-                icon.classList.remove('fa-moon');
-                icon.classList.add('fa-sun', 'animate');
-                localStorage.setItem('darkMode', 'enabled');
-            } else {
-                icon.classList.remove('fa-sun');
-                icon.classList.add('fa-moon', 'animate');
-                localStorage.setItem('darkMode', 'disabled');
-            }
-            setTimeout(function () {
-                icon.classList.remove('animate');
-            }, 500);
-        }
-
-        document.getElementById('toggle-button').addEventListener('click', toggleDarkMode);
-
-        window.addEventListener('DOMContentLoaded', (event) => {
-            if (localStorage.getItem('darkMode') === 'enabled') {
-                document.body.classList.add('dark-mode');
-                var icon = document.querySelector('#toggle-button i');
-                icon.classList.remove('fa-moon');
-                icon.classList.add('fa-sun');
-            }
-        });
     </script>
 
     <!-- <script>

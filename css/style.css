@@ -31,7 +31,7 @@
     background-color: white;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.9);
     width: 200px;
 }
 
@@ -96,6 +96,7 @@ body.dark-mode {
     padding: 20px;
     width: 300px;
 }
+
 .kesan-1 .pesan-1 .card-4 {
     border-radius: 8px;
     box-shadow: 0 0 25px rgba(0, 0, 0, 0.9);
@@ -103,6 +104,7 @@ body.dark-mode {
     padding-top: 2rem;
     width: 60rem;
     text-align: center;
+
 }
 
 
@@ -118,21 +120,19 @@ body.dark-mode .container .project,
 body.dark-mode .container .project p#project,
 body.dark-mode .org-chart .level .position,
 body.dark-mode .org-chart .leder .container,
-/* body.dark-mode .container .row .card */
-/* body.dark-mode .container img
-body.dark-mode .container img#app   
-body.dark-mode .container .row .image img */
-
-body.dark-mode .kesan .pesan .card-3
-body.dark-mode .kesan-1 .pesan-1 .card-4
-
-/* body.dark-mode .container .project p, */
-body.dark-mode .project a div {
-    background-color: rgb(0, 0, 0);
+body.dark-mode .kesan .pesan .card-3,
+body.dark-mode .kesan-1 .pesan-1 .card-4 {
+    background-color: #000000;
     color: white;
 }
 
-body.dark-mode .container .project a.card-1 div.item {
+body.dark-mode .project a .item,
+body.dark-mode .project a.card-1 .item {
+    background-color: #000000;
+    color: white;
+}
+
+body.dark-mode .container .project a.card-1 .item {
     box-shadow: 0 4px 8px 0 rgba(192, 192, 192, 0.5), 0 6px 20px 0 rgba(192, 192, 192, 0.4);
 }
 
@@ -147,6 +147,7 @@ body.dark-mode .leder img {
 body.dark-mode .kesan .pesan .card-3 {
     box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
 }
+
 body.dark-mode .kesan-1 .pesan-1 .card-4 {
     box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
 }
@@ -238,11 +239,7 @@ a i {
     height: auto;
 }
 
-/* #myImg:hover {
-    opacity: 0.7;
-} */
 
-/* The Modal (background) */
 .modal {
     display: none;
     position: fixed;
@@ -256,8 +253,6 @@ a i {
     align-items: center;
     justify-content: center;
     text-align: center;
-    /* padding-top: 50px; */
-    /* padding-bottom: 50px; */
     box-sizing: border-box;
     opacity: 1 !important;
 }
@@ -271,13 +266,11 @@ a i {
 
 
 
-/* Modal Content (image) */
 .modal-content {
     margin: auto;
     display: block;
     max-width: 90%;
     height: auto;
-    /* max-height: 90%; */
     width: auto;
     height: auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -287,7 +280,6 @@ a i {
     opacity: 1 !important;
 }
 
-/* Caption of Modal Image */
 #caption {
     margin: auto;
     display: block;
@@ -299,7 +291,6 @@ a i {
     height: auto;
 }
 
-/* Add Animation */
 @keyframes zoom {
     from {
         transform: scale(0);
@@ -310,7 +301,6 @@ a i {
     }
 }
 
-/* The Close Button */
 .close {
     position: absolute;
     top: 30px;
@@ -330,7 +320,7 @@ a i {
     cursor: pointer;
 }
 
-/* 100% Image Width on Smaller Screens */
+
 @media only screen and (max-width: 700px) {
     .modal-content {
         width: 100%;

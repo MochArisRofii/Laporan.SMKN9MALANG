@@ -56,24 +56,24 @@
       Bayangan putih untuk mode gelap
     } */
 
+    :root {
+      --gradient-light: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 70%);
+      --gradient-dark: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 70%);
+    }
+
     .image {
       display: flex;
       justify-content: center;
       align-items: center;
       padding-top: 5rem;
       position: relative;
-      /* Untuk positioning efek hitam */
       max-width: 100%;
-      /* Agar tidak melampaui ukuran kontainer */
     }
 
     .image img {
       width: 50rem;
-      /* Menentukan ukuran gambar */
       max-width: 100%;
-      /* Mengatur agar gambar tidak melampaui ukuran kontainer */
       height: auto;
-      /* Menjaga rasio aspek gambar */
     }
 
     .image::after {
@@ -82,63 +82,52 @@
       bottom: 0;
       width: 100%;
       height: 30%;
-      /* Menyesuaikan tinggi efek hitam */
-      background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 70%);
-      /* Efek gradasi hitam di bawah gambar */
-      /* filter: blur(10px); */
-      /* Efek blur */
+      background: var(--gradient-light);
     }
 
-
-    .card-2 {
-      /* background: #fff; */
-      border-radius: 2rem;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      /* max-width: 500px; */
-      width: 100%;
-      margin: 20px;
-      padding: 20px;
-      /* box-sizing: border-box; */
-      /* border-radius: 3rem; */
+    body.dark-mode .image::after {
+      background: var(--gradient-dark);
     }
 
-    .card-2 h2 {
-      font-size: 1.5em;
-      margin-bottom: 20px;
+    .kesan {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-bottom: 10rem;
     }
 
-    .card-2 h3 {
-      font-size: 1.2em;
-      margin-bottom: 15px;
+    .pesan {
+      display: flex;
+      gap: 100px;
     }
 
-    .card-2 ul {
-      list-style: none;
-      padding: 0;
-    }
+    .kesan .pesan .card-5 {
+    border-radius: 8px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    padding-top: 2rem;
+    width: 60rem;
+    text-align: center;
 
-    .card-2 ul li {
-      /* background: #f9f9f9; */
-      margin-bottom: 10px;
-      padding: 10px;
-      border-radius: 5px;
-      border: 1px solid #ddd;
-    }
+}
 
-    body.dark-mode .container .row .card-2 
-    
 
+    body.dark-mode .container .row .card-2
     /* body.dark-mode .container img
 body.dark-mode .container img#app   
 body.dark-mode .container .row .image img */
 
     /* body.dark-mode .container .project p, */
+    body.dark-mode .kesan .pesan .card-5
     body.dark-mode .project a div {
       background-color: rgb(0, 0, 0);
       color: white;
     }
 
     body.dark-mode .container .row .card-2 .card-body {
+      box-shadow: 0 4px 8px 0 rgba(192, 192, 192, 0.5), 0 6px 20px 0 rgba(192, 192, 192, 0.4);
+    }
+    body.dark-mode .kesan .pesan .card-5  {
       box-shadow: 0 4px 8px 0 rgba(192, 192, 192, 0.5), 0 6px 20px 0 rgba(192, 192, 192, 0.4);
     }
   </style>
@@ -155,6 +144,7 @@ body.dark-mode .container .row .image img */
         <li><a href="index.html#about">Project</a></li>
         <!-- <li><a href="organisasi.html">Organisasi</a></li> -->
         <li><a href="index.html#team">Team</a></li>
+        <li><a href="index.html#pesanDanKesan">Pesan & Kesan</a></li>
         <li><a href="index.html#contact">Informasi</a></li>
         <!-- <button id="toggle-button">Toggle Dark Mode</button> -->
         <a id="toggle-button" class="btn"><i class="fas fa-moon"></i></a>
@@ -169,26 +159,24 @@ body.dark-mode .container .row .image img */
   </div>
 
   <div class="container p-5">
-    <h3 style="padding-top: 1rem;">PT. Universal Big Data (UBig.co.id) adalah anak perusahaan PT. Alfasoft, didirikan oleh Fatkul Amri pada
-      tahun
-      2003.</h3>
+    <h3 style="padding-top: 1rem;">UBIG.CO.ID, solusi untuk mengembangkan perangkat lunak dan mendapatkan konsultasi
+      terkait masalah bisnis Anda.</h3>
 
 
-    <h3 style="padding-top: 1rem;">Berlokasi di Malang, Jawa Timur, dengan kantor di Jl. Mawar Jambe No. 13, No. 2 Kalpataru, dan Jl.
-      Loncat
-      Indah Kav No.</h3>
+    <h3 style="padding-top: 1rem;">Temukan strategi cerdas, peluang pertumbuhan, dan inovasi yang akan membantu
+      mendorong bisnis Anda ke tingkat</h3>
 
-    <h3 style="padding-top: 1rem;">A16-17. UBig.co.id fokus menyediakan platform dan konten Big Data dalam berbagai kategori
-      (harga,
-      berita, gaya hidup, </h3>
+    <h3 style="padding-top: 1rem;">berikutnya. Kami adalah mitra terpercaya untuk memajukan bisnis Anda melalui
+      teknologi dan konsultasi </h3>
 
-    <h3 style="padding-top: 1rem;">dll.) yang dapat diakses melalui API/Webservice menggunakan berbagai bahasa pemrograman.
-      UBig.co.id melayani</h3>
+    <h3 style="padding-top: 1rem;">bisnis yang handal. dengan Melayani dari banyak Data Center yang tersebar di beberapa
+      negara seperti Amerika,</h3>
 
-      
+    <h3 style="padding-top: 1rem;"> Singapura, dan Indonesia untuk menjangkau pasar global yang luas, membuat tim Anda
+    </h3>
 
-    <h3 style="padding-top: 1rem;"> Data Center di Amerika, Singapura, dan Indonesia.</h3>
-    
+    <h3 style="padding-top: 1rem;">mendapatkan bisnis kelas internasional dengan instan</h3>
+
   </div>
 
 
@@ -233,29 +221,26 @@ body.dark-mode .container .row .image img */
   </div>
 
 
-  <div class="container mt-5" style="display: flex; justify-content: center;">
-    <div class="row justify-content-center">
-      <div class="col-md-8">
-        <div class="card-2 shadow-sm">
-          <div class="card-body" style="display: flex; justify-content: center;align-items: center; border-radius: 3rem; ">
-            <div class="container" style="text-align: left; margin-right: 3rem;">
-              <h2 class="card-title ">Visi</h2>
-              <h4 class="card-text">Menjadi penyedia platform dan konten Big Data kelas dunia.</h4>
-            </div>
-            <div class="container" style="text-align: left;">
-              <h2 class="card-title mt-4">Misi</h2>
-              <h4 style="padding-top: 1rem;">Menjadi penyedia platform dan konten Big Data kelas dunia.</h4>
-              <h4 style="padding-top: 1rem;">Kesuksesan luar biasa dalam target kami.</h4>
-              <h4 style="padding-top: 1rem;">Kepuasan customer dalam pembuatan website atau mobile apps.</h4>
-              <h4 style="padding-top: 1rem;">Bekerja dalam waktu yang lebih singkat.</h4>
-              <h4 style="padding-top: 1rem;">Leadership skills untuk mengelola teknik informatika.</h4>
-            </div>
+  <div class="kesan" style="padding-top: 3rem;">
+    <div class="pesan">
+      <div class="card-5" style="padding-top: 7rem;">
+        <h2>Visi</h2>
+        <h4>Menjadi penyedia platform dan konten Big Data kelas dunia.</h4>
+      </div>
 
-          </div>
-        </div>
+      <div class="card-5" style="text-align: left;">
+        <h2>Misi</h2>
+        <ul>
+          <li><h4 style="padding-top: 2rem;">Menjadi penyedia platform dan konten Big Data kelas dunia.</h4></li>
+          <li><h4 style="padding-top: 1rem;">Kesuksesan luar biasa dalam target kami.</h4></li>
+          <li><h4 style="padding-top: 1rem;">Kepuasan customer dalam pembuatan website atau mobile apps.</h4></li>
+          <li><h4 style="padding-top: 1rem;">Bekerja dalam waktu yang lebih singkat.</h4></li>
+          <li><h4 style="padding-top: 1rem;">Leadership skills untuk mengelola teknik informatika.</h4></li>
+        </ul>
       </div>
     </div>
   </div>
+
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
@@ -292,6 +277,7 @@ body.dark-mode .container .row .image img */
       }
     });
   </script>
+
 </body>
 
 </html>
