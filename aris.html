@@ -63,7 +63,7 @@
 <body>
     <header class="header">
         <a href="index.html" class="logo"><img src="./images/ubig.png" alt=""></a>
-        <div class="fas fa-bars"></div>
+        <div class="fas fa-bars nav-toggle"></div>
         <nav class="navbar">
             <ul>
                 <li><a style="text-decoration: none;" href="index.html">Home</a></li>
@@ -312,6 +312,20 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
 
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const navToggle = document.querySelector('.nav-toggle');
+            const navbar = document.querySelector('.navbar');
+
+            navToggle.addEventListener('click', function () {
+                navbar.classList.toggle('nav-active');
+                navToggle.classList.toggle('fa-bars');
+                navToggle.classList.toggle('fa-times');
+            });
+        });
+    </script>
     <script>
         function toggleDarkMode() {
             document.body.classList.toggle('dark-mode');

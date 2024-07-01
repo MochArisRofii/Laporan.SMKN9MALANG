@@ -7,6 +7,17 @@ $(document).ready(function () {
     //     }
     // });
 
+    // document.addEventListener('DOMContentLoaded', function () {
+    //     const navToggle = document.querySelector('.nav-toggle');
+    //     const navbar = document.querySelector('.navbar');
+
+    //     navToggle.addEventListener('click', function () {
+    //         navbar.classList.toggle('nav-active');
+    //         navToggle.classList.toggle('fa-bars');
+    //         navToggle.classList.toggle('fa-times');
+    //     });
+    // });
+
     const counters = document.querySelectorAll('.counter');
     const speed = 120;
 

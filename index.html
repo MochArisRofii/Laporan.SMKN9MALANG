@@ -18,6 +18,7 @@
         integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
     <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
     <script src="./js/main.js"></script>
@@ -28,8 +29,8 @@
 
 <body id="body">
     <header class="header">
-        <a href="index.html" class="logo"><img src="./images/ubig.png" alt=""></a>
-        <div class="fas fa-bars"></div>
+        <a href="index.html" class="logo"><img src="./images/ubig.png" alt="Logo"></a>
+        <div class="fas fa-bars nav-toggle"></div>
         <nav class="navbar">
             <ul>
                 <li><a href="#home">Home</a></li>
@@ -38,10 +39,7 @@
                 <li><a href="organisasi.html#organisasi">Profil Ubig</a></li>
                 <li><a href="#team">Team</a></li>
                 <li><a href="#pesanDanKesan">Pesan & Kesan</a></li>
-                <!-- <li><a href="#contact">Informasi</a></li> -->
-                <!-- <button id="toggle-button">Toggle Dark Mode</button> -->
-                <a id="toggle-button" class="btn"><i class="fas fa-moon"></i></a>
-                <!-- <a href=""><i class="ri-moon-line change-theme" id="toggle-button"></i></a> -->
+                <li><a id="toggle-button" class="btn"><i class="fas fa-moon"></i></a></li>
             </ul>
         </nav>
     </header>
@@ -466,6 +464,20 @@
         });
 
     </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const navToggle = document.querySelector('.nav-toggle');
+            const navbar = document.querySelector('.navbar');
+
+            navToggle.addEventListener('click', function () {
+                navbar.classList.toggle('nav-active');
+                navToggle.classList.toggle('fa-bars');
+                navToggle.classList.toggle('fa-times');
+            });
+        });
+    </script>
+
     <script>
         function toggleDarkMode() {
             document.body.classList.toggle('dark-mode');

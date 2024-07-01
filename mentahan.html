@@ -29,19 +29,17 @@
 <body>
 
     <header class="header">
-        <a href="index.html" class="logo"><img src="./images/ubig.png" alt=""></a>
-        <div class="fas fa-bars"></div>
+        <a href="index.html" class="logo"><img src="./images/ubig.png" alt="Logo"></a>
+        <div class="fas fa-bars nav-toggle"></div>
         <nav class="navbar">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="index.html#prod">Project</a></li>
-                <li><a href="index.html#kegiatan">Kegiatan</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#prod">Project</a></li>
+                <li><a href="#kegiatan">Kegiatan</a></li>
                 <li><a href="organisasi.html#organisasi">Profil Ubig</a></li>
-                <li><a href="index.html#team">Team</a></li>
-                <!-- <li><a href="index.html#contact">Informasi</a></li> -->
-                <!-- <button id="toggle-button">Toggle Dark Mode</button> -->
-                <a id="toggle-button" class="btn"><i class="fas fa-moon"></i></a>
-                <!-- <a href=""><i class="ri-moon-line change-theme" id="toggle-button"></i></a> -->
+                <li><a href="#team">Team</a></li>
+                <li><a href="#pesanDanKesan">Pesan & Kesan</a></li>
+                <li><a id="toggle-button" class="btn"><i class="fas fa-moon"></i></a></li>
             </ul>
         </nav>
     </header>
@@ -51,6 +49,19 @@
 
 
 
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const navToggle = document.querySelector('.nav-toggle');
+            const navbar = document.querySelector('.navbar');
+
+            navToggle.addEventListener('click', function () {
+                navbar.classList.toggle('nav-active');
+                navToggle.classList.toggle('fa-bars');
+                navToggle.classList.toggle('fa-times');
+            });
+        });
+    </script>
     <script>
         // Get the modal
         // Get the modal

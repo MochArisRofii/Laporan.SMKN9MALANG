@@ -11,9 +11,9 @@
     scroll-behavior: smooth;
 }
 
-/* .header .navbar {
-    
-} */
+.header .navbar {
+    transition: top 0.3s ease;
+}
 
 .org-chart {
     text-align: center;
@@ -441,7 +441,6 @@ a i {
     top: 0;
     left: 0;
     z-index: 100;
-    position: fixed;
     background: linear-gradient(to left, #ff0000, #8b0000, #000000);
     box-shadow: 0 .2rem .5rem rgba(0, 0, 0, .4);
 }
@@ -449,9 +448,12 @@ a i {
 .header .logo img {
     width: 15rem;
     height: auto;
-    top: 0;
-    left: 0;
-    /* margin-right: 30rem; */
+}
+
+.header .navbar {
+    display: flex;
+    align-items: center;
+    transition: top 0.3s ease;
 }
 
 .header .navbar ul {
@@ -475,16 +477,13 @@ a i {
     text-decoration: underline;
 }
 
-.header .logo i {
-    padding: 0.5rem;
-}
-
 .header .fa-bars {
     color: #fff;
     cursor: pointer;
     font-size: 3rem;
     display: none;
 }
+
 
 /* styles.css */
 #toggle-button {
@@ -1575,47 +1574,32 @@ a i {
 }
 
 @media (max-width: 1000px) {
-    html {
-        font-size: 50%;
-    }
-
-    .header .logo img {
-        width: 20%;
-        height: 5rem;
-        top: 0;
-        left: 0;
-        background-size: cover;
-    }
-
     .header .fa-bars {
         display: block;
-        color: white;
-        margin-right: 1rem;
-    }
-
-    .header .fa-bars:hover {
-        color: #00bfff;
     }
 
     .header .navbar {
-        position: fixed;
         top: -120%;
         left: 0;
-        height: auto;
+        position: fixed;
         width: 100%;
         background-color: white;
         z-index: 1000;
-        border-top: .1rem solid rgba(0, 0, 0, .3);
+        transition: top 0.3s ease;
+    }
+
+    .header .navbar.nav-active {
+        top: 60px;
+        /* Adjust this value as needed */
     }
 
     .header .navbar ul {
-        height: 100%;
-        width: 100%;
-        flex-flow: column;
+        flex-direction: column;
+        padding: 2rem 0;
     }
 
     .header .navbar ul li {
-        margin: 1rem 0;
+        margin: 1.5rem 0;
     }
 
     .header .navbar ul li a {
@@ -1623,13 +1607,8 @@ a i {
         font-size: 2.4rem;
     }
 
-
-    .header .fa-times {
-        transform: rotate(90deg);
-    }
-
-    .header .nav-toggle {
-        top: 5.8rem;
+    .header .nav-toggle.fa-times {
+        color: #fff;
     }
 
     .home h1 {

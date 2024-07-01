@@ -102,14 +102,14 @@
     }
 
     .kesan .pesan .card-5 {
-    border-radius: 8px;
-    box-shadow: 0 0 25px rgba(0, 0, 0, 0.9);
-    padding: 20px;
-    padding-top: 2rem;
-    width: 60rem;
-    text-align: center;
+      border-radius: 8px;
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.9);
+      padding: 20px;
+      padding-top: 2rem;
+      width: 60rem;
+      text-align: center;
 
-}
+    }
 
 
     body.dark-mode .container .row .card-2
@@ -118,8 +118,7 @@ body.dark-mode .container img#app
 body.dark-mode .container .row .image img */
 
     /* body.dark-mode .container .project p, */
-    body.dark-mode .kesan .pesan .card-5
-    body.dark-mode .project a div {
+    body.dark-mode .kesan .pesan .card-5 body.dark-mode .project a div {
       background-color: rgb(0, 0, 0);
       color: white;
     }
@@ -127,7 +126,8 @@ body.dark-mode .container .row .image img */
     body.dark-mode .container .row .card-2 .card-body {
       box-shadow: 0 4px 8px 0 rgba(192, 192, 192, 0.5), 0 6px 20px 0 rgba(192, 192, 192, 0.4);
     }
-    body.dark-mode .kesan .pesan .card-5  {
+
+    body.dark-mode .kesan .pesan .card-5 {
       box-shadow: 0 4px 8px 0 rgba(192, 192, 192, 0.5), 0 6px 20px 0 rgba(192, 192, 192, 0.4);
     }
   </style>
@@ -137,7 +137,7 @@ body.dark-mode .container .row .image img */
 <body>
   <header class="header">
     <a href="index.html" class="logo"><img src="./images/ubig.png" alt=""></a>
-    <div class="fas fa-bars"></div>
+    <div class="fas fa-bars nav-toggle"></div>
     <nav class="navbar">
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -232,11 +232,21 @@ body.dark-mode .container .row .image img */
       <div class="card-5" style="text-align: left;">
         <h2>Misi</h2>
         <ul>
-          <li><h4 style="padding-top: 2rem;">Menjadi penyedia platform dan konten Big Data kelas dunia.</h4></li>
-          <li><h4 style="padding-top: 1rem;">Kesuksesan luar biasa dalam target kami.</h4></li>
-          <li><h4 style="padding-top: 1rem;">Kepuasan customer dalam pembuatan website atau mobile apps.</h4></li>
-          <li><h4 style="padding-top: 1rem;">Bekerja dalam waktu yang lebih singkat.</h4></li>
-          <li><h4 style="padding-top: 1rem;">Leadership skills untuk mengelola teknik informatika.</h4></li>
+          <li>
+            <h4 style="padding-top: 2rem;">Menjadi penyedia platform dan konten Big Data kelas dunia.</h4>
+          </li>
+          <li>
+            <h4 style="padding-top: 1rem;">Kesuksesan luar biasa dalam target kami.</h4>
+          </li>
+          <li>
+            <h4 style="padding-top: 1rem;">Kepuasan customer dalam pembuatan website atau mobile apps.</h4>
+          </li>
+          <li>
+            <h4 style="padding-top: 1rem;">Bekerja dalam waktu yang lebih singkat.</h4>
+          </li>
+          <li>
+            <h4 style="padding-top: 1rem;">Leadership skills untuk mengelola teknik informatika.</h4>
+          </li>
         </ul>
       </div>
     </div>
@@ -249,6 +259,19 @@ body.dark-mode .container .row .image img */
 
 
 
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const navToggle = document.querySelector('.nav-toggle');
+      const navbar = document.querySelector('.navbar');
+
+      navToggle.addEventListener('click', function () {
+        navbar.classList.toggle('nav-active');
+        navToggle.classList.toggle('fa-bars');
+        navToggle.classList.toggle('fa-times');
+      });
+    });
+  </script>
   <script>
     function toggleDarkMode() {
       document.body.classList.toggle('dark-mode');

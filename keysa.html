@@ -28,7 +28,7 @@
 <body>
     <header class="header">
         <a href="index.html" class="logo"><img src="./images/ubig.png" alt=""></a>
-        <div class="fas fa-bars"></div>
+        <div class="fas fa-bars nav-toggle"></div>
         <nav class="navbar">
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -50,6 +50,19 @@
 
 
 
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const navToggle = document.querySelector('.nav-toggle');
+            const navbar = document.querySelector('.navbar');
+
+            navToggle.addEventListener('click', function () {
+                navbar.classList.toggle('nav-active');
+                navToggle.classList.toggle('fa-bars');
+                navToggle.classList.toggle('fa-times');
+            });
+        });
+    </script>
     <script>
         function toggleDarkMode() {
             document.body.classList.toggle('dark-mode');
