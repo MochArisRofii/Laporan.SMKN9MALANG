@@ -43,7 +43,7 @@
         /* .small-carousel .carousel-item img {
             width: 90%;
             /* Adjust the width to make the second carousel smaller */
-        /* } */ 
+        /* } */
 
         .text {
             font-size: 15px;
@@ -56,6 +56,34 @@
         .description {
             margin-left: 20px;
             /* Jarak menjorok ke dalam */
+        }
+
+        .ts {
+            font-size: 17px;
+            padding-top: 1rem;
+        }
+
+        .ts1 {
+            font-size: 17px;
+            padding-top: 1rem;
+        }
+
+        .ds {
+            padding-top: 10px;
+            margin-left: 3rem;
+        }
+
+        .tsds {
+            padding-top: 1rem;
+        }
+
+        .tsds1 {
+            margin-left: 3rem;
+            padding-top: 10px;
+        }
+
+        .tsds1 li {
+            font-size: 15px;
         }
     </style>
 </head>
@@ -79,14 +107,53 @@
             </ul>
         </nav>
     </header>
-
-    <div class="container" style="padding-top: 20rem; text-align: center;">
-        <section id="aris"></section>
-        <h1 style="font-size: 40px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Proyek Saya</h1>
-        <h3>Selama di Ubig, saya mengerjakan berbagai proyek. Berikut adalah proyek-proyek saya:</h3>
+    <section id="aris"></section>
+    <div class="container" style="padding-top: 20rem;">
+        <h3 class="ts">
+            Magang di PT. Universal Big Data Malang memberi saya kesempatan untuk mengembangkan berbagai proyek
+        </h3>
+        <h3 class="ts1">
+            web teknologi. Saya bekerja pada:
+        </h3>
+        <div class="ds">
+            <h4>1. SiakadPlus: Sistem manajemen sekolah.</h4>
+            <h4 class="tsds">
+                2. Botpress Cloud: Membuat beberapa chatbot:
+            </h4>
+            <div class="tsds1">
+                <li>Bot Movie: Rekomendasi film.</li>
+                <li>Bot Pelanggaran Siswa: Mencatat dan mengelola pelanggaran siswa.</li>
+                <li>Bot BPJS: Informasi layanan BPJS.</li>
+                <li>Bot Quiz Login dengan OTP: Kuis dengan login OTP.</li>
+                <li>Bot Laporan Masyarakat: Pelaporan oleh masyarakat.</li>
+            </div>
+            <h4 style="padding-top: 1rem;">Selain itu, saya menggunakan Django dan React.js untuk input pelanggaran siswa serta Frappe Framework untuk aplikasi tes magang, </h4>
+            <h4 style="padding-top: 1rem;">Ubig LSM, dan Education. Laporan ini akan menjelaskan setiap proyek dan teknologi yang digunakan.</h4>
+        </div>
     </div>
 
-    <div class="container" style="padding-top: 15rem;">
+    <div class="container" style="padding-top: 10rem;">
+        <h1 style="text-align: center;">Teknologi Yang Digunakan</h1>
+        <h3 style="padding-top: 3rem;" class="ts">Laravel: Framework PHP yang digunakan untuk mengembangkan backend SiakadPlus.</h3>
+        <h3 class="ts">Flutter: Framework UI untuk membangun antarmuka pengguna SiakadPlus yang responsif di berbagai platform.</h3>
+        <h3 class="ts">Django: Framework web yang digunakan untuk mengembangkan aplikasi pengiriman pesan WhatsApp melalui API Nobox.</h3>
+        <h3 class="ts">React.js: Library JavaScript untuk membangun antarmuka pengguna yang dinamis dalam proyek Django.</h3>
+        <h3 class="ts">Nobox API: Sistem yang digunakan untuk integrasi dan mengirim pesan melalui WhatsApp.</h3>
+        <h3 class="ts">Django REST Framework: Toolkit untuk membangun API web menggunakan Django.</h3>
+        <h3 class="ts">MySQL: Sistem manajemen basis data relasional yang digunakan untuk menyimpan data aplikasi.</h3>
+        <h3 class="ts">Python: Bahasa pemrograman utama yang digunakan dalam pengembangan backend.</h3>
+        <h3 class="ts">Frappe Framework: Framework yang digunakan untuk membuat aplikasi seperti tes magang, Ubig LSM, dan Education</h3>
+        <h3 class="ts">Ubuntu: Sistem operasi yang mendukung pengembangan menggunakan Frappe Framework </h3>
+        <h3 class="ts">Docker: Platform untuk mengelola kontainer aplikasi (opsional)</h3>
+    </div>
+
+    <div class="container" style="padding-top: 20rem; text-align: center;">
+        
+        <h1 style="font-size: 40px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Proyek Saya</h1>
+        <!-- <h3>Selama Magang di Ubig, saya mengerjakan berbagai proyek. Berikut adalah proyek-proyek saya:</h3> -->
+    </div>
+
+    <div class="container" style="padding-top: 10rem;">
         <div class="row">
             <div class="col-md-6">
                 <img src="./images/siakadplus.png" alt=""
@@ -292,7 +359,7 @@
                 <div class="description">
                     <h4>Aplikasi Ini Memfasilitasi Pengelolaan Tes Magang Dengan Fitur </h4>
                     <h4>Seperti Pengaturan Kota Dan Manajemen Data Siswa.</h4>
-                    <!-- <h4></h4> -->
+                    <h4></h4>
                 </div>
                 <h4 class="text">Education</h4>
                 <div class="description">
