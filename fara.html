@@ -51,6 +51,7 @@
             padding-top: 10px;
             margin-left: 3rem;
         }
+
         .ds1 {
             padding-top: 4px;
             margin-left: 3rem;
@@ -68,10 +69,68 @@
         .tsds1 li {
             font-size: 15px;
         }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.9);
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            box-sizing: border-box;
+            padding: 20px;
+        }
+
+        .modal img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            margin: auto;
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            max-width: 90%;
+            max-height: 90%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            animation-name: zoom;
+            animation-duration: 0.6s;
+            object-fit: contain;
+            background: none;
+            /* Atau background: transparent; */
+        }
+
+        @keyframes zoom {
+            from {
+                transform: scale(0);
+            }
+
+            to {
+                transform: scale(1);
+            }
+        }
+
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+            cursor: pointer;
+        }
     </style>
 </head>
 
-<body>
+<body id="body">
     <header class="header">
         <a href="index.html" class="logo"><img src="./images/ubig.png" alt=""></a>
         <div class="fas fa-bars nav-toggle"></div>
@@ -105,46 +164,62 @@
                     Botpress sebagai frontend. Saya telah berpengalaman</h4>
                 <h4 style="padding-top: 5px;"> menggunakan dua versi Botpress, yaitu versi lama dengan server bp.exe
                     dan Botpress terbaru yaitu Botpress Cloud yang berbasis </h4>
-                <h4 style="padding-top: 5px;"> internet. Dalam proyek-proyek ini, chatbot diintegrasikan dengan database MySQL dan
+                <h4 style="padding-top: 5px;"> internet. Dalam proyek-proyek ini, chatbot diintegrasikan dengan database
+                    MySQL dan
                     FastAPI sebagai backend. Berikut beberapa </h4>
                 <h4 style="padding-top: 5px;">chatbot yang telah dikembangkan :</h4>
                 <div class="tsds1">
-                    <li>Chatbot Bigmovie: Menggunakan FatsAPI yang dikerjakan oleh rekan saya untuk memberikan informasi terkait film.</li>
+                    <li>Chatbot Bigmovie: Menggunakan FatsAPI yang dikerjakan oleh rekan saya untuk memberikan informasi
+                        terkait film.</li>
                     <li>Chatbot Manajemen Siswa: Membantu dalam pengelolaan data siswa.</li>
                     <li>Chatbot UKM: Menyediakan dukungan dan informasi untuk Usaha Kecil dan Menengah.</li>
-                    <li>Duplikasi Chatbot Blibli dan Erajaya: Meniru fungsionalitas chatbot untuk perusahaan-perusahaan besar.</li>
+                    <li>Duplikasi Chatbot Blibli dan Erajaya: Meniru fungsionalitas chatbot untuk perusahaan-perusahaan
+                        besar.</li>
                     <li>Chatbot Quiz dan Ujian: Menyediakan platform untuk kuis dan ujian online.</li>
                     <li>Chatbot Quiz dan Ujian: Menyediakan platform untuk kuis dan ujian online.</li>
                 </div>
-                <h4 style="padding-top: 2rem;">Dalam proyek ini, saya bertanggung jawab sebagai frontend developer yang menangani tampilan chatbot serta pengelolaan database. </h4>
-                <h4 style="padding-top: 5px; padding-bottom: 2rem;"> Saya bekerja dalam tim dengan rekan yang menangani backend, termasuk pembuatan API.</h4>
+                <h4 style="padding-top: 2rem;">Dalam proyek ini, saya bertanggung jawab sebagai frontend developer yang
+                    menangani tampilan chatbot serta pengelolaan database. </h4>
+                <h4 style="padding-top: 5px; padding-bottom: 2rem;"> Saya bekerja dalam tim dengan rekan yang menangani
+                    backend, termasuk pembuatan API.</h4>
             </div>
             <h4 class="tsds">
                 2. Digital Marketing Nobox.ai
             </h4>
             <div class="ds1">
-                <h4 style="padding-top: 5px;">Proyek ini fokus pada pemasaran digital untuk Nobox.ai. Dalam tim ini, tugas utama saya adalah memahami dan mengoperasikan</h4>
-                <h4 style="padding-top: 5px;"> semua fitur yang tersedia di Nobox.ai, serta menjalankan latihan pemasaran untuk platform ini.</h4>
-                <h4 style="padding-top: 5px;">  Berikut beberapa tanggung jawab saya dalam proyek ini:</h4>
+                <h4 style="padding-top: 5px;">Proyek ini fokus pada pemasaran digital untuk Nobox.ai. Dalam tim ini,
+                    tugas utama saya adalah memahami dan mengoperasikan</h4>
+                <h4 style="padding-top: 5px;"> semua fitur yang tersedia di Nobox.ai, serta menjalankan latihan
+                    pemasaran untuk platform ini.</h4>
+                <h4 style="padding-top: 5px;"> Berikut beberapa tanggung jawab saya dalam proyek ini:</h4>
                 <div class="tsds1">
                     <li>Pemahaman Fitur Nobox.ai: Pelajari dan kuasai semua fitur yang ditawarkan oleh Nobox.ai.</li>
-                    <li>Latihan Pemasaran: Mengaplikasikan strategi pemasaran untuk meningkatkan awareness dan penggunaan Nobox.ai.</li>
+                    <li>Latihan Pemasaran: Mengaplikasikan strategi pemasaran untuk meningkatkan awareness dan
+                        penggunaan Nobox.ai.</li>
                 </div>
-                <h4 style="padding-top: 2rem;">Proyek ini menuntut kemampuan analisis yang kuat serta keterampilan dalam mengaplikasikan strategi pemasaran digital.</h4>
+                <h4 style="padding-top: 2rem;">Proyek ini menuntut kemampuan analisis yang kuat serta keterampilan dalam
+                    mengaplikasikan strategi pemasaran digital.</h4>
             </div>
             <h4 class="tsds">
-                3. Tim Akademik Ubig 
+                3. Tim Akademik Ubig
             </h4>
             <div class="ds1">
-                <h4 style="padding-top: 5px;">Dalam proyek ini, saya bertugas mendukung kegiatan akademik di Ubig. Tugas-tugas saya meliputi:</h4>
+                <h4 style="padding-top: 5px;">Dalam proyek ini, saya bertugas mendukung kegiatan akademik di Ubig.
+                    Tugas-tugas saya meliputi:</h4>
                 <div class="tsds1">
-                    <li>Distribusi Link Konfirmasi Kehadiran: Kirim link konfirmasi kehadiran kepada guru-guru yang mewakili sekolah-sekolah target.</li>
-                    <li>Pengumpulan Draft MoU: Memintai draft-draft MoU dari sekolah-sekolah yang belum mengirimkan.</li>
-                    <li>Update dan Pembuatan List di Google Spreadsheet: Mengelola dan memperbarui data terkait soft launching Nobox.ai.</li>
-                    <li>Partisipasi Soft Launching Nobox.ai: Pada soft launching 12 Juni 2024 di gedung MCC, bertugas di resepsionis untuk melayani guru-guru dan mengurus draft MoU.</li>
+                    <li>Distribusi Link Konfirmasi Kehadiran: Kirim link konfirmasi kehadiran kepada guru-guru yang
+                        mewakili sekolah-sekolah target.</li>
+                    <li>Pengumpulan Draft MoU: Memintai draft-draft MoU dari sekolah-sekolah yang belum mengirimkan.
+                    </li>
+                    <li>Update dan Pembuatan List di Google Spreadsheet: Mengelola dan memperbarui data terkait soft
+                        launching Nobox.ai.</li>
+                    <li>Partisipasi Soft Launching Nobox.ai: Pada soft launching 12 Juni 2024 di gedung MCC, bertugas di
+                        resepsionis untuk melayani guru-guru dan mengurus draft MoU.</li>
                 </div>
-                <h4 style="padding-top: 2rem;">Dalam proyek ini, keterampilan komunikasi dan manajemen data sangat penting untuk </h4>
-                <h4 style="padding-top: 5px; padding-bottom: 2rem;">memastikan kelancaran acara dan administrasi yang terkait.</h4>
+                <h4 style="padding-top: 2rem;">Dalam proyek ini, keterampilan komunikasi dan manajemen data sangat
+                    penting untuk </h4>
+                <h4 style="padding-top: 5px; padding-bottom: 2rem;">memastikan kelancaran acara dan administrasi yang
+                    terkait.</h4>
             </div>
         </div>
         <h3 class="ts">
@@ -155,9 +230,274 @@
         </h3>
     </div>
 
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+    </div>
 
 
+    <div class="one1">
+        <div class="container" style="padding-top: 20rem; text-align: center;">
 
+            <h1 style="font-size: 40px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Chat Bot AI
+                Botpress cloud
+            </h1>
+            <!-- <h3>Selama Magang di Ubig, saya mengerjakan berbagai proyek. Berikut adalah proyek-proyek saya:</h3> -->
+        </div>
+
+
+        <div class="container" style="padding-top: 10rem;">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="./images/Blibli single choice.jpg" alt=""
+                        style="margin-right: 10px; width: 50rem; height: auto; border-radius: 3rem;" class="myImg">
+                </div>
+                <div class="col-md-6">
+                    <h2 style="text-align: center; margin-top: 10rem;">Blibli single choice</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="container" style="padding-top: 10rem;">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2 style="text-align: center; margin-top: 10rem;">Blibli Expression & raw input</h2>
+                </div>
+                <div class="col-md-6">
+                    <img src="./images/Blibli Expression & raw input.jpg" alt=""
+                        style="margin-right: 10px; width: 50rem; height: auto; border-radius: 3rem;" class="myImg">
+                </div>
+            </div>
+        </div>
+
+        <div class="container" style="padding-top: 10rem;">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="./images/Bigmovie TmDB.jpg" alt=""
+                        style="margin-right: 10px; width: 50rem; height: auto; border-radius: 3rem;" class="myImg">
+                </div>
+                <div class="col-md-6">
+                    <h2 style="text-align: center; margin-top: 10rem;">Bigmovie TmDB</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="container" style="padding-top: 10rem;">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2 style="text-align: center; margin-top: 10rem;">Bigmovie OmDb 1</h2>
+                </div>
+                <div class="col-md-6">
+                    <img src="./images/Bigmovie OmDb 1.jpg" alt=""
+                        style="margin-right: 10px; width: 50rem; height: auto; border-radius: 3rem;" class="myImg">
+                </div>
+            </div>
+        </div>
+
+        <div class="container" style="padding-top: 10rem;">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="./images/Bigmovie OmDb 2.jpg" alt=""
+                        style="margin-right: 10px; width: 50rem; height: auto; border-radius: 3rem;" class="myImg">
+                </div>
+                <div class="col-md-6">
+                    <h2 style="text-align: center; margin-top: 10rem;">Bigmovie OmDb 2</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="container" style="padding-top: 10rem;">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2 style="text-align: center; margin-top: 10rem;">Bot Quiz</h2>
+                </div>
+                <div class="col-md-6">
+                    <img src="./images/Quiz.jpg" alt=""
+                        style="margin-right: 10px; width: 50rem; height: auto; border-radius: 3rem;" class="myImg">
+                </div>
+            </div>
+        </div>
+
+        <div class="container" style="padding-top: 10rem;">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="./images/Duplikasi BPJS.jpg" alt=""
+                        style="margin-right: 10px; width: 50rem; height: auto; border-radius: 3rem;" class="myImg">
+                </div>
+                <div class="col-md-6">
+                    <h2 style="text-align: center; margin-top: 10rem;">Duplikasi BPJS</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="container" style="padding-top: 10rem;">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2 style="text-align: center; margin-top: 10rem;">Bot Quiz Ujian berkelompok</h2>
+                </div>
+                <div class="col-md-6">
+                    <img src="./images/Bot Quiz Ujian berkelompok.jpg" alt=""
+                        style="margin-right: 10px; width: 50rem; height: auto; border-radius: 3rem;" class="myImg">
+                </div>
+            </div>
+        </div>
+
+        <div class="container" style="padding-top: 10rem;">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="./images/Duplikasi Erajaya.jpg" alt=""
+                        style="margin-right: 10px; width: 50rem; height: auto; border-radius: 3rem;" class="myImg">
+                </div>
+                <div class="col-md-6">
+                    <h2 style="text-align: center; margin-top: 10rem;">Duplikasi Erajaya</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="two2">
+        <div class="container" style="padding-top: 20rem; text-align: center;">
+
+            <h1 style="font-size: 40px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Chat Bot AI
+                Botpress Lama
+            </h1>
+            <!-- <h3>Selama Magang di Ubig, saya mengerjakan berbagai proyek. Berikut adalah proyek-proyek saya:</h3> -->
+        </div>
+
+        <div class="container" style="padding-top: 10rem;">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="./images/Botpress lama BigMovie.jpg" alt=""
+                        style="margin-right: 10px; width: 50rem; height: auto; border-radius: 3rem;" class="myImg">
+                </div>
+                <div class="col-md-6">
+                    <h2 style="text-align: center; margin-top: 10rem;">Botpress lama BigMovie</h2>
+                </div>
+            </div>
+        </div>  
+
+        <div class="container" style="padding-top: 10rem;">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2 style="text-align: center; margin-top: 10rem;">Botpress lama Bot UKM</h2>
+                </div>
+                <div class="col-md-6">
+                    <img src="./images/Botpress lama Bot UKM.jpg" alt=""
+                        style="margin-right: 10px; width: 50rem; height: auto; border-radius: 3rem;" class="myImg">
+                </div>
+            </div>
+        </div>  
+
+        <div class="container" style="padding-top: 10rem;">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="./images/Botpress lama Manajemen siswa.jpg" alt=""
+                        style="margin-right: 10px; width: 50rem; height: auto; border-radius: 3rem;" class="myImg">
+                </div>
+                <div class="col-md-6">
+                    <h2 style="text-align: center; margin-top: 10rem;">Botpress lama Manajemen siswa</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="container" style="padding-top: 10rem;">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2 style="text-align: center; margin-top: 10rem;">Botpress lama Haidoc</h2>
+                </div>
+                <div class="col-md-6">
+                    <img src="./images/Haidoc.jpg" alt=""
+                        style="margin-right: 10px; width: 50rem; height: auto; border-radius: 3rem;" class="myImg">
+                </div>
+            </div>
+        </div>  
+
+    </div>
+
+    <div class="three3">
+        <div class="container" style="padding-top: 20rem; text-align: center;">
+
+            <h1 style="font-size: 40px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Digital Marketing Nobox.AI Dan Tim Akademik Ubig
+            </h1>
+            <!-- <h3>Selama Magang di Ubig, saya mengerjakan berbagai proyek. Berikut adalah proyek-proyek saya:</h3> -->
+        </div>
+
+        <div class="container" style="padding-top: 10rem;">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="./images/Digital Marketing PPT promosi Nobox.ai" alt=""
+                        style="margin-right: 10px; width: 50rem; height: auto; border-radius: 3rem;" class="myImg">
+                </div>
+                <div class="col-md-6">
+                    <h2 style="text-align: center; margin-top: 10rem;">Digital Marketing PPT promosi Nobox.ai</h2>
+                </div>
+            </div>
+        </div> 
+
+        <div class="container" style="padding-top: 10rem;">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2 style="text-align: center; margin-top: 10rem;">Berpartisipasi di Soft Launching Nobox sebagai tim Akademik UBIG</h2>
+                </div>
+                <div class="col-md-6">
+                    <img src="./images/Berpartisipasi di Soft Launching Nobox sebagai tim Akademik UBIG.jpg" alt=""
+                        style="margin-right: 10px; width: 50rem; height: auto; border-radius: 3rem;" class="myImg">
+                </div>
+            </div>
+        </div> 
+
+        <div class="container" style="padding-top: 10rem; padding-bottom: 10remx    ;">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="./images/Beberapa draft MoU yang saya buat sebagai tim Akademik ubig.jpg" alt=""
+                        style="margin-right: 10px; width: 50rem; height: auto; border-radius: 3rem;" class="myImg">
+                </div>
+                <div class="col-md-6">
+                    <h2 style="text-align: center; margin-top: 10rem;">Beberapa draft MoU yang saya buat sebagai tim Akademik ubig</h2>
+                </div>
+            </div>
+        </div> 
+    </div>
+
+    <script>
+        // Get the modal
+        // Get the modal
+        document.addEventListener("DOMContentLoaded", function () {
+            var modal = document.getElementById("myModal");
+            var modalImg = document.getElementById("img01");
+            var captionText = document.getElementById("caption");
+            var images = document.getElementsByClassName("myImg");
+            var span = document.getElementsByClassName("close")[0];
+            var body = document.getElementById("body")
+
+            // Loop through all images and add click event listener
+            for (var i = 0; i < images.length; i++) {
+                images[i].onclick = function () {
+                    modal.style.display = "block";
+                    body.style.overflow = "hidden";
+                    // body.style.display = "hidden"
+                    modalImg.src = this.src;
+                    captionText.innerHTML = this.alt;
+                };
+            }
+
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function () {
+                modal.style.display = "none";
+                body.style.overflow = "auto";
+            };
+
+            // Close the modal when user clicks outside the modal content
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            };
+        });
+
+    </script>
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
